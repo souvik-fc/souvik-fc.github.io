@@ -1,0 +1,94 @@
+div.relative {
+		position: relative;
+    background-color: lightblue;
+    width: 900px;
+    padding: 25px;
+    border: 5px solid green;
+    margin: 150px;
+    height: 420px;
+    border-radius: 10px;
+}
+.c{
+    position: absolute;
+	background-color: white;
+    width: 350px;
+    display: inline-block;
+    padding: 25px;
+    border: 2px solid navy;
+    margin: 20px;
+    height: 350px;
+    left:20px;
+    top: 10px;
+    bottom:15px;
+    border-radius: 10px;
+}
+
+.d{
+    position: absolute;
+	background-color: white;
+    width: 350px;
+    display: inline-block;
+    padding: 25px;
+    border: 2px solid navy;
+    margin: 20px;
+    height: 350px;
+    right: 20px;
+    top:10px;
+    bottom:10px;
+    border-radius: 10px;
+}
+
+code{
+   position: absolute;
+	background-color: green;
+    width: 190px;
+    display: inline-block;
+    padding: 25px;
+    border: 2px solid navy;
+    margin: 20px;
+    height: 5px;
+    left:15%;
+   
+    
+    bottom:-13%;
+    
+   
+
+}
+.menu{
+       position: absolute;
+	background-color: lightblue;
+    width: 120px;
+    height: 10px;
+    padding: 25px;
+    border: 2px ;
+    margin: 20px;
+    height: 10px;
+    left:7%;
+    top:-16%;
+    border-radius: 4px;
+    
+  
+}
+.menu1{
+       position: absolute;
+	background-color: white;
+
+    width: 120px;
+    height: 10px;
+    padding: 25px;
+    border: 2px solid lightblue;
+    margin: 20px;
+    height: 10px;
+    left:26%;
+    top:-16%;
+    
+    border-radius: 4px;
+  
+}
+img{
+
+	  padding-top: 25px;
+    
+       
+    }
