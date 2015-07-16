@@ -1,94 +1,177 @@
-div.relative {
-		position: relative;
-    background-color: lightblue;
+body{
+     font-family: "Open Sans Semibold";
+}
+
+
+div.relative{
+    position: relative;
+}
+div.absolute {
+	position: absolute;
+    background-color: #e4efff;
     width: 900px;
     padding: 25px;
-    border: 5px solid green;
+    border: 5px #e4efff;
     margin: 150px;
-    height: 420px;
+    height: 450px;
     border-radius: 10px;
 }
-.c{
+.div1{
     position: absolute;
 	background-color: white;
-    width: 350px;
+    width: 360px;
     display: inline-block;
     padding: 25px;
-    border: 2px solid navy;
-    margin: 20px;
-    height: 350px;
-    left:20px;
+    border: 2px solid #e4efff;
+    margin: 30px;
+    height: 360px;
+    left:10px;
     top: 10px;
     bottom:15px;
     border-radius: 10px;
 }
 
-.d{
+.div2{
     position: absolute;
 	background-color: white;
-    width: 350px;
+    width: 360px;
     display: inline-block;
     padding: 25px;
-    border: 2px solid navy;
-    margin: 20px;
-    height: 350px;
-    right: 20px;
+    border: 2px solid #e4efff;
+    margin: 30px;
+    height: 360px;
+    right: 10px;
     top:10px;
-    bottom:10px;
+    bottom:15px;
     border-radius: 10px;
 }
 
-code{
-   position: absolute;
-	background-color: green;
-    width: 190px;
-    display: inline-block;
-    padding: 25px;
-    border: 2px solid navy;
-    margin: 20px;
-    height: 5px;
-    left:15%;
-   
-    
-    bottom:-13%;
-    
-   
 
-}
-.menu{
-       position: absolute;
-	background-color: lightblue;
-    width: 120px;
-    height: 10px;
-    padding: 25px;
-    border: 2px ;
-    margin: 20px;
-    height: 10px;
-    left:7%;
-    top:-16%;
-    border-radius: 4px;
-    
-  
-}
-.menu1{
-       position: absolute;
-	background-color: white;
-
-    width: 120px;
-    height: 10px;
-    padding: 25px;
-    border: 2px solid lightblue;
-    margin: 20px;
-    height: 10px;
-    left:26%;
-    top:-16%;
-    
-    border-radius: 4px;
-  
-}
 img{
+	padding-top: 25px;
+}
 
-	  padding-top: 25px;
+ul {
+    position: absolute;
+    top:102px;
+    left: 200px;
+    margin: 15px;
+}
+
+li{   
+    background-color:#e4efff;
+    border: 2px solid #e4efff ;
+    display: inline;
+    font-size: 20px;
+    border-bottom-style: none;
+
+}
+
+.tab1{
+    z-index: -1;
+    padding : 50px;
+    text-decoration: none; 
+
+}
+.sub{
+    position: absolute;
+    left:20px;
+    top: 10px;
+    background-color: white;
+    width: 820px;
+    padding: 25px;
+    border: 2px solid #e4efff;
+    margin: 20px;
+    height: 360px;
+    bottom:15px;
+    border-radius: 10px;
+}
+.button{
+        
+    left: 650px;
     
-       
-    }
+}
+.button1{
+        
+    left: 450px;
+    
+}
+
+.button_learn
+        {
+
+    left:80px;
+}
+ 
+ .button_attri{
+
+    position: absolute;
+    width: 150px;
+    color:white;
+    margin-right: 630px;
+    margin-top: 5px;
+    background: #25970E;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+    border-color: #D2D9DD;
+    padding:1%;
+    bottom: -27px;
+    font-size: 20px;
+
+}
+
+.mytext {
+    width: 280px;
+    height: 30px;
+}
+
+.border {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #D2D9DD;
+}
+.tab    {
+    width: 90px;
+    margin-left: 250px;
+    margin-top: 110px;
+    cursor: pointer;
+    border-bottom: none;
+    float:left;
+}
+.news_tab{
+    background:#E5EFFF;
+    border-right:;
+}
+.subscribe_tab{
+    margin-left: 5px;
+}
+ .Format3{
+    color:#1b6bce;
+    font-size:13.81px;
+    padding:1%;
+}
+
+.tabb    {
+    width: 200px;
+    margin-left: 80px;
+    margin-top: 140px;
+    cursor: pointer;
+    font-size: 25px;
+    float:left;
+    background: #25970E;
+
+}
+.Formatt3{
+    color:white;
+    padding:1%;
+}
+
+#subscribe{
+    visibility: hidden;
+    color:#6e6e6e;
+}
+.colour {
+    color:#1b6bce;
+
+}

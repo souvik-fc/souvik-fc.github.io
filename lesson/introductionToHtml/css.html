@@ -1,38 +1,86 @@
 <!doctype html>
 <html>
-
 <head>
-
-	<link rel="stylesheet" type="text/css" href="tab.css">
+	<link rel="stylesheet" type="text/css" href="tab.css">    
+      
 </head>
-   <body>
-	
-		<div class="relative">
+<body>
+	<script type="text/javascript" src="css.js"></script>
 
-			<div class="menu">
-				<h4>NEWS
-			</div>
-	       <div class="menu1">
-				<h4>SUBSCRIBE
-		   </div>
-	        <div class="c"> 
-	       	   <h1>WELCOME</h1>
+    <div class="relative">
+	    <div onclick="newstab()" id="tid1" class="tab border news_tab Format3"><center>News</center></div>
+     
+        <div onclick="subscribetab()"  id="tid2" class="tab border subscribe_tab Format3">Subscribe</div>
 
-                 <p>Simple and effective AngularJS bindings for FusionCharts JavaScript Charting Library.Simple and effective AngularJS bindings for FusionCharts JavaScript Charting Library.</p>
-                 <p> AngularJS bindings for FusionCharts JavaScript Charting Library</p>
-                 <code>
-             	   <h1 align="center">LEARN MORE
-                 </code>
+
+       
+	    <div id="news" class="absolute">
+       
+
+	        <div class="div1"> 
+	           <h1>WELCOME</h1>
+               <p>Simple and effective AngularJS bindings for FusionCharts JavaScript Charting Library.Simple and effective AngularJS bindings  for  FusionCharts JavaScript Charting Library.</p>
+               <p class="colour"> AngularJS bindings for FusionCharts JavaScript Charting Library</p>
+               <button class="button_learn button_attri">Learn More</button>
+            </div>
+	        <div class="div2"> 
+	       	   <h1>Latest News</h1>
+	   	       <img src="image.jpg">
 	        </div>
-	   
-	  
-	    <div class="d"> 
-	       	<p ><h1>Latest News</h1>
-	       	  <img src="image.jpg">
-	     </div>
-	       
-      </div>
+	    </div>
+        <div id="subscribe" class="absolute">
 
+	        <div class="sub"> 
+	      
+               <form>
+                   <h1>&nbsp;&nbsp;&nbsp;&nbsp;Subcription Form</h1>
+                   <table align="left" cellspacing="25">
+
+	                  <tr>
+	                      <td><font size="3"> Name:</font></td>
+	                      <td><input type="text" name="nam" id="name" class="mytext" value=" " ></td>
+
+	                      <td><font size="3" > COUNTRY:</font></td>
+	                      <td><select class="mytext" id="country" value="nepal ">
+                          <option value="nepal" selected>NEPAL</option>
+                          <option value="bhutan">BHUTAN</option>
+                          <option value="mayanmar">MAYANMAR</option>
+         
+                          </select> </td>
+	
+	                  </tr>	
+
+	                  <tr>
+	                    <td><font size="3"> Email:</font></td>
+	                    <td><input type="email" id="email" class="mytext" id="mail" value=" "></td>
+
+	                    <td><font size="3"> Address:</font></td>
+	                    <td><textarea rows="5" cols="33" id="address" ></textarea></td>
+		
+	
+	                  </tr>	
+
+
+	                  <tr>
+	                    <td><font size="3"> Sex:</font></td>
+	                    <td><input type="radio" value="male" id="male">Male
+	                    <input type="radio" value="female" id="female">Female</td>
+	                  </tr>	
+                      <tr>
+     	                <td><font size="3">Interest:</td>
+	                    <td><input type="checkbox" name="interest" value="football">Football 
+	    	            <input type="checkbox" name="interest" value="cricket">Movie
+	                    <input type="checkbox" name="interest" value="singing">Reading
+	                    </td>
+	                  </tr>	
+                    </table>
+
+                       <button onclick="datas()" class="button button_attri" >Subscribe</button>
+                       <button type="reset" value="reset" class="button1 button_attri">Reset</button>
+
+               </form>
+            </div>
+            </div>
+        </div>
 </body>
-
 </html>
