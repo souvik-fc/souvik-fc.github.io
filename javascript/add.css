@@ -1,0 +1,45 @@
+.button_attri{
+
+            
+            width: 200px;
+            margin-left: 40px;
+            margin-bottom: 5px;
+            background:white;
+            border-width: 2px;
+            border-style: solid;
+            cursor: pointer;
+            padding:1%;
+            font-size: 20px;
+            border-radius: 4px;
+
+}
+
+
+       input {
+            height: 30px;
+            max-width: 100px;
+            border:2px solid blue;
+            text-align: center;
+            border-radius: 4px;
+}
+
+
+
+
+        .sum {
+            float: left;
+            margin: 10px;
+            text-align: center;
+            border-color: red;
+            position: relative;
+            height: 200px;
+            width: 200px;
+            padding: 0px;
+            margin: 10px;
+            margin-left: 0px;
+            margin-bottom: 10px;
+            background-color: lightyellow;
+            border:2px ;
+            border-radius: 4px;
+}    
+        
