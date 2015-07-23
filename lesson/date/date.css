@@ -1,0 +1,28 @@
+.up{
+	 
+	 width: 1400px;
+	 height: 800px;
+	 top:200px;
+	 background: lightgreen;
+}
+.time{
+	  position: absolute;
+	  left: 100px;
+	  top: 400px;
+	  height: 200px;
+	  background: lightblue;
+}
+.add{
+	  position: absolute;
+	  right: 100px;
+	  top: 400px;
+	  background: lightblue;
+}
+
+.info{
+	  position: absolute;
+	  right: 630px;
+	  top: 100px;
+	  height: 150px;
+	  background: lightblue;
+}

@@ -1,0 +1,91 @@
+<html>
+	<head>
+		
+		<link rel="stylesheet" type="text/css" href="date.css"> 
+	</head>
+	<body> 
+		<script type="text/javascript" src="date.js"></script>
+  <div class ="up"><h1 align="center">DATE TIME CALCULATOR:</h1>
+		<div class="info"><h2 align="center">DATE DIFFERENCE:</h2>
+             <table>          
+          <tr>
+             <td>date_1</td>
+            <td><input   type="text" name="year1"  style="color:#888;" id="year1" value="mm/dd/yyyy" onfocus="on(this)" onblur="off(this)"/></td>
+          
+
+          
+      </tr>
+      <tr>
+      	     <td>date_2</td>
+            <td><input type="text" name="year2"  style="color:#888;" id="year2" value="mm/dd/yyyy" onfocus="on(this)" onblur="off(this)"/></td>
+       </tr>
+      <tr>
+      	<td>date difference</td>
+      	<td><input  type="text" name="diff" style="color:#888;" id="dif" value="DIFFERENCE" onfocus="on(this)" onblur="off(this)"/></td>
+      	<td><button onclick="difference()">difference</button></td>
+      </tr>
+      </table>
+      </div>
+      <div class="time"><h2 align="center">TIME DIFFERENCE:</h2>
+
+
+
+      	<table>          
+          <tr>
+             <td>time_1</td>
+            <td><input   type="text" name="time1"  style="color:#888;" id="time1" value="hour:min" onfocus="on(this)" onblur="off(this)"/></td>
+            <td> <select id="tm1">
+  <option value="am">AM</option>
+  <option value="pm">PM</option>
+  
+</select> </td>
+
+          
+      </tr>
+      <tr>
+      	     <td>time_2</td>
+            <td><input   type="text" name="time2"  style="color:#888;" id="time2" value="hour:min" onfocus="on(this)" onblur="off(this)"/></td>
+             <td> <select id="tm2">
+  <option value="am">AM</option>
+  <option value="pm">PM</option>
+  
+</select> </td>
+
+          
+      </tr>
+      <tr>
+      	<td>time difference</td>
+      	<td><input  type="text" name="diff" style="color:#888;" id="diff"value="difference" onfocus="on(this)" onblur="off(this)"/></td>
+      	<td><button onclick="timedif()">difference</button></td>
+      </tr>
+      </table>
+
+
+      </div>
+
+      <div class="add"><h2 align="center">DATE TIME INTERVAL:</h2>
+         <table>          
+          <tr>
+             <td>date/time</td>
+            <td><input   type="text" name="year1"  style="color:#888;" id="dt" value="mm/dd/yyyy or hh:mm" onfocus="on(this)" onblur="off(this)"/></td>
+             <td><input   type="text" name="year1"  style="color:#888;" id="in" value="interval" onfocus="on(this)" onblur="off(this)"/></td>
+             <td> <select id="intrvl">
+  <option value="day">DAY</option>
+  <option value="month">MONTH</option>
+  <option value="year">YEAR</option>
+  <option value="hour">HOUR</option>
+  <option value="minute">MINUTE</option>
+  
+  
+</select> </td>
+<td><input   type="text" name="year1"  style="color:#888;" id="ans" value="interval" onfocus="on(this)" onblur="off(this)"/></td>
+     <td><button onclick="add()">final</button></td>       
+
+          
+      </tr>
+    </table>
+       </div> 
+</div>       
+	</body>
+	
+</html>
