@@ -29,21 +29,21 @@ function cla_loan()
        R=eval(r)/100;
    	   R=R/12;
    
-   if(e==="RS")
+   if(e==="RS" || e==="")
    {
    	   R1=Math.pow((1+R),eval(t));
    	   e=l*R*R1;
    	   e=e/(R1-1);
    	   document.getElementById("emi").value=e;   
    }
-   if(l==="RS")
+   if(l==="RS" || l==="")
    {
       R1=Math.pow((1+R),eval(t));
       l=(e*(R1-1))/(R*R1);
       document.getElementById("loan").value=l;   
    }
    
-if(t==="month")
+if(t==="month" || t==="")
    {
     	t=Math.log(e/(e-l*R))/Math.log(1+R);
    	document.getElementById("time").value=t;   
