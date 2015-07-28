@@ -8,7 +8,7 @@ function on(ev)
 }
 function off(ev)
 {
-    if(ev.value=="")
+    if(ev.value==="")
     	{ 
     		ev.value=ev.defaultValue;
     		 ev.style.color="#888";
@@ -70,7 +70,9 @@ function timedif()
     }
      else  {
         if(at1[0]===undefined && at1[1]===undefined)
-          { at1[0]=0;at1[1]=0;}
+          { at1[0]=0;
+            at1[1]=0;
+          }
        else if(at1[0]===undefined)
                 at1[0]=0;
        else (at1[1]===undefined)
@@ -115,11 +117,11 @@ document.getElementById("diff").value="time diff:"+hour+"hour"+min+"minutes";
 
 function add()
 {
-  debugger;
+  var d1=a=b=0;
   var dt=document.getElementById("dt").value;
    var intr=document.getElementById("in").value;
    var sel=document.getElementById("intrvl").value;
-    var d1=a=b=0;
+    
    if(dt.indexOf("/")>-1 && sel==="day")
    {
      var newdate = new Date(dt);
@@ -129,15 +131,15 @@ function add()
       d1=dd;
        dd=dd%31;
 
-      var a=Math.floor(eval(d1)/31);
+       a=Math.floor(eval(d1)/31);
       
      }
     var mm =eval(newdate.getMonth())+ eval(a)+1;
     if(mm>11)
     {
      
-      var b=Math.floor(eval(mm)/12);
-      var mm = Math.floor(eval(mm)%12);
+       b=Math.floor(eval(mm)/12);
+       mm = Math.floor(eval(mm)%12);
     }
     var y = eval(newdate.getFullYear())+eval(b);
     var someFormattedDate = mm + '/' + dd + '/' + y;
@@ -161,11 +163,11 @@ function add()
    }
    if(dt.indexOf("/")>-1 && sel==="year")
    {
-     var newdate = new Date(dt);
+      newdate = new Date(dt);
       var dd = newdate.getDate();
       var mm=newdate.getMonth()+1;
           y=newdate.getFullYear()+eval(intr);
-          var someFormattedDate = mm + '/' + dd + '/' + y;
+           someFormattedDate = mm + '/' + dd + '/' + y;
     document.getElementById('ans').value = someFormattedDate;
    }
 
@@ -177,7 +179,7 @@ function add()
         {
           h=eval(h%24);
         }
-      var someFormattedDate =h+":"+ar[1];
+       someFormattedDate =h+":"+ar[1];
     document.getElementById('ans').value = someFormattedDate;
     }
     if(dt.indexOf(":")>-1 && sel==="minute")
@@ -191,7 +193,7 @@ function add()
           h=eval(ar[1])+Math.floor(eval(m/60));
         }
         
-      var someFormattedDate=h+":"+m;
+       someFormattedDate=h+":"+m;
     document.getElementById('ans').value = someFormattedDate;
     }
 

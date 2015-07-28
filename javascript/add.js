@@ -29,7 +29,7 @@ function addition()
 		struc+="<div class='sum' id='d"+i+"'>";
 		struc+="<div>"+rnd[j]+"</div>";
 		struc+="<div>+"+rnd[j+1]+"</div>";
-		struc+="<div class='result'><input id='"+i+"' type='text'  onfocus='on(this.id)' onblur='off(this.id)'/></div></div>"
+		struc+="<div class='result'><input id='"+i+"' type='text'  onfocus='on(this.id)' onblur='off(this.id)'/></div></div>";
 		ar.push(rnd[j]+rnd[j+1]);
 		j=j+2;
 	}
@@ -69,7 +69,7 @@ function subtraction()
 		struc+="<div class='sum' id='d"+i+"'>";
 		struc+="<div>"+rnd[j]+"</div>";
 		struc+="<div>-"+rnd[j+1]+"</div>";
-		struc+="<div class='result'><input id='"+i+"' type='text' onfocus='on(this.id)' onblur='off(this.id)'/></div></div>"
+		struc+="<div class='result'><input id='"+i+"' type='text' onfocus='on(this.id)' onblur='off(this.id)'/></div></div>";
 		ar.push(rnd[j]-rnd[j+1]);
 		j=j+2;
 	}

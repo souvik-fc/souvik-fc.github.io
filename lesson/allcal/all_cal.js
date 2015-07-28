@@ -69,9 +69,9 @@ var memory  = "";
 
 
     var ca=new cal();
-    if(document.getElementById('divdc')!=null)
+    if(document.getElementById('divdc')!==null)
   document.getElementById('divdc').remove();
-   if(document.getElementById('divmc')!=null)
+   if(document.getElementById('divmc')!==null)
        document.getElementById('divmc').remove();
 
 var divc=create('div',div1,{'id':'divc'},{'position':'absolute','top':'80px','width':'800px','height':'800px'},null,"");
@@ -110,8 +110,7 @@ function digit(id)
    if (current.length > MAXLENGTH)
        { current = "exceed"; //limit length
        } else
-       { if (    (eval(current) == 0)
-              && (current.indexOf(".") == -1)
+       { if (    (eval(current) === 0) && (current.indexOf(".")=== -1)
             )
            { current = id;
            } else
@@ -231,10 +230,10 @@ function myfunction1()
 	
 	var m=new mc();
 
- if(document.getElementById('divdc')!=null)
+ if(document.getElementById('divdc')!==null)
   document.getElementById('divdc').remove();
 
-if(document.getElementById('calculator')!=null)
+if(document.getElementById('calculator')!==null)
   document.getElementById('calculator').remove();
  
     
@@ -262,11 +261,11 @@ var bt=create('button',btdiv,{'id':'button'},{'position':'absolute','left':'170p
 
 function myfunction2()
 {
-  var d=new dc;
+  var d=new dc();
    
-    if(document.getElementById('divmc')!=null)
+    if(document.getElementById('divmc')!==null)
        document.getElementById('divmc').remove();
-      if(document.getElementById('calculator')!=null)
+      if(document.getElementById('calculator')!==null)
   document.getElementById('calculator').remove();
     
   
@@ -288,12 +287,12 @@ for(var i=0;i<3;i++)
  
 }
 
-for(var i=3;i<6;i++)
+for( i=3;i<6;i++)
 {
- var tr=create('tr',table,null,null,null,"");
- var td=create('td',tr,null,null,null,d.label[i]);
- var td1=create('td',tr,null,null,null,"");
- var inp=create('input',td1,{'id':d.id[i]},null,null,"");
+  tr=create('tr',table,null,null,null,"");
+  td=create('td',tr,null,null,null,d.label[i]);
+  td1=create('td',tr,null,null,null,"");
+  inp=create('input',td1,{'id':d.id[i]},null,null,"");
 
    if(i===5)
    {
@@ -308,27 +307,27 @@ for(var i=3;i<6;i++)
   
  }
 }
-   var tr=create('tr',table,null,null,null,"");
- var td=create('td',tr,null,null,null,"Date/Time");
- var td1=create('td',tr,null,null,null,"");
- var inp=create('input',td1,{'id':'dt'},null,null,"");
- var td2=create('td',tr,null,null,null,"");
+    tr=create('tr',table,null,null,null,"");
+  td=create('td',tr,null,null,null,"Date/Time");
+  td1=create('td',tr,null,null,null,"");
+  inp=create('input',td1,{'id':'dt'},null,null,"");
+  td2=create('td',tr,null,null,null,"");
   var tr1=create('tr',table,null,null,null,"");
-   var td3=create('td',tr1,null,null,null,"Interval");
-    var td5=create('td',tr1,null,null,null,"");
- var inp=create('input',td5,{'id':'in'},null,null,"");
+ var td3=create('td',tr1,null,null,null,"Interval");
+  var td5=create('td',tr1,null,null,null,"");
+  inp=create('input',td5,{'id':'in'},null,null,"");
  var td4=create('td',tr1,null,null,null,"");
   var sel=create('select',td4,{'id':'intrvl'},null,null,"");
- var op=create('option',sel,{'value':'day'},null,null,"DAY");
-   var op1=create('option',sel,{'value':'month'},null,null,"MONTH") ;   
-   var op2=create('option',sel,{'value':'year'},null,null,"YEAR");
-   var op3=create('option',sel,{'value':'hour'},null,null,"HOUR") ; 
-   var op3=create('option',sel,{'value':'minute'},null,null,"MINUTE") ;  
+  op=create('option',sel,{'value':'day'},null,null,"DAY");
+  op1=create('option',sel,{'value':'month'},null,null,"MONTH") ;   
+  op2=create('option',sel,{'value':'year'},null,null,"YEAR");
+  var op3=create('option',sel,{'value':'hour'},null,null,"HOUR") ; 
+  op3=create('option',sel,{'value':'minute'},null,null,"MINUTE") ;  
 
-   var tr3=create('tr',table,null,null,null,"");
+  var tr3=create('tr',table,null,null,null,"");
  var td6=create('td',tr3,null,null,null,"Final");
  var td6=create('td',tr3,null,null,null,"");
- var inp=create('input',td6,{'id':'ans'},null,null,"");
+  inp=create('input',td6,{'id':'ans'},null,null,"");
  var td7=create('td',tr3,null,null,null,""); 
  var bt=create('button',td7,{'id':'button3'},null,{'click':add},"Final");
   

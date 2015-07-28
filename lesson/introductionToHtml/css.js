@@ -5,7 +5,7 @@ function subscribetab()
           document.getElementById("news").style.visibility="hidden";
           document.getElementById("subscribe").style.visibility="visible";
           document.getElementById("tid1").style.color=" #6e6e6e";
-          document.getElementById("tid2").style.color="#1b6bce"
+          document.getElementById("tid2").style.color="#1b6bce";
 
     }
           function newstab()

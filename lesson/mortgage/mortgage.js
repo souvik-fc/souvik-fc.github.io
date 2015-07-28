@@ -8,7 +8,7 @@ function on(ev)
 }
 function off(ev)
 {
-    if(ev.value=="")
+    if(ev.value==="")
     	{ 
     		ev.value=ev.defaultValue;
     		 ev.style.color="#888";
