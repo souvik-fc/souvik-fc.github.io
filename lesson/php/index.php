@@ -51,7 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    	$c=1;
      $interestErr = "interest is required";
    } else {
-     $interest = test_input($_POST["interest"]);
+     $interest = $_POST["interest"];
+     echo $interest[0];
    }
    if (empty($_POST["phn"] ) ){
      $phnErr = "phn no is required";
@@ -65,11 +66,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    }
 
    if($c===0){
-   	$succ="successfully subscribe";
-   	 $data = "$name, $email, $country, $address, $gender, $interest, $phn\n";
-   	 $myf = fopen("/home/souvikjana/souvik-fc.github.io/lesson/php/testfile.csv", "w");
+   	
+    $succ="successfully subscribe";
+      $data = "$name, $email, $country, $address, $gender, $interest, $phn\n";
+      $myf = fopen("/home/souvikjana/souvik-fc.github.io/lesson/php/testfile.csv", "a");
 fwrite($myf, $data);
 fclose($myf);
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "souvik";
+
+
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+else{
+$sql = "INSERT INTO subscribe (email,name,country,address,sex,phone_no)
+VALUES ('$email', '$name', '$country', '$address', '$gender', '$phn')";
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+for($i=0;$i<count($interest);$i++)
+{
+$pql = "INSERT INTO hobby (email,interest)
+VALUES ('$email','$interest[$i]')";
+if (mysqli_query($conn, $pql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $pql . "<br>" . mysqli_error($conn);
+}
+}
+
+
+
+
+
+}
+mysqli_close($conn);
+
+
 }
    	
 }	
@@ -162,9 +206,9 @@ function test_input($data) {
 	                  </tr>	
                       <tr>
      	                <td><font size="3">Interest:</td>
-	                    <td><input type="checkbox" name="interest" value="football">Football 
-	    	            <input type="checkbox" name="interest" value="movie">Movie
-	                    <input type="checkbox" name="interest" value="reading">Reading
+	                    <td><input type="checkbox" name="interest[]" value="football" <?php if (isset($interest) && $interest=="football") echo "checked";?>>Football 
+	    	            <input type="checkbox" name="interest[]" value="movie" <?php if (isset($interest) && $interest=="movie") echo "checked";?>>Movie
+	                    <input type="checkbox" name="interest[]" value="reading" <?php if (isset($interest) && $interest=="reading") echo "checked";?>>Reading
 	                    </td>
 	                    <span class="error">* <?php echo $interestErr;?></span>
 	                  </tr>	
