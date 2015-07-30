@@ -223,7 +223,8 @@ function test_input($data) {
 
                       
                        <button type="reset" value="reset" class="button1 button_attri">Reset</button>
-                       <input type="submit" value="Submit" class="button button_attri">
+                       <input type="submit" name="Submit" value="Submit" class="button button_attri">
+                       <?php if (isset($_POST['Submit'])) { echo "<script type='text/javascript'>subscribetab();</script>"; } ?>
                </form>
             </div>
             </div>

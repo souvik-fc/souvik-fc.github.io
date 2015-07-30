@@ -33,7 +33,7 @@
 
 	        <div class="sub"> 
 
-	        	<?php
+	        	<?
 	        	  $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
@@ -42,11 +42,15 @@ if(! $conn )
 {
   die('Could not connect: ' . mysql_error());
 }
-$sql = 'SELECT name,subscribe.email,phone_no,country,address,sex,football,movie,reading FROM subscribe,interest where 
-subscribe.email=interest.email and subscribe.email=$mail';
-$result = mysqli_query($sql);
-
+$sql = "SELECT name,subscribe.email,phone_no,country,address,sex,football,movie,reading FROM subscribe,interest where 
+subscribe.email=interest.email and subscribe.email=mail";
+if($result = mysqli_query($conn,$sql))
+{
+echo "gg";
+}
 	      $row = mysqli_fetch_array($result);
+
+	      print_r($result);
 	        	?>
 	      
                <form action="data.php" method="post">
@@ -56,7 +60,7 @@ $result = mysqli_query($sql);
 
 	                  <tr>
 	                      <td><font size="3"> Name:</font></td>
-	                      <td><input type="text" name="abc"  class="mytext" value="<?php echo '$row[name]' ?>"></td>
+	                      <td><input type="text" name="abc"  class="mytext" value="<?php echo $row[name] ?>"></td>
                           
 	                      <td><font size="3" > COUNTRY:</font></td>
 	                      <td><select class="mytext" name="country" >
