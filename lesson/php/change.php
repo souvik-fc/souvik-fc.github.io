@@ -1,3 +1,24 @@
+<?
+
+$dbhost = 'localhost';
+$dbuser = 'root';
+$dbpass = '';
+$dbname='souvik';
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
+if(! $conn )
+{
+  die('Could not connect: ' . mysql_error());
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+$order="UPDATE subscribe SET email='$_POST[email]', name='$_POST[abc]',country='$_POST[country]', phone_no='$_POST[phn]',address='$_POST[address]',sex='$_POST[male]' WHERE email='$_POST[email]' ";
+	var_dump($order);
+	mysqli_query($conn,$order);
+}
+
+
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -34,39 +55,52 @@
 	        <div class="sub"> 
 
 	        	<?
-	        	  $dbhost = 'localhost';
+
+	        	$mail=$_GET['mail'];
+
+	        	echo $mail;
+
+
+
+ $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
+$dbname='souvik';
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
 if(! $conn )
 {
   die('Could not connect: ' . mysql_error());
 }
-$sql = "SELECT name,subscribe.email,phone_no,country,address,sex,football,movie,reading FROM subscribe,interest where 
-subscribe.email=interest.email and subscribe.email=mail";
-if($result = mysqli_query($conn,$sql))
-{
-echo "gg";
-}
-	      $row = mysqli_fetch_array($result);
 
-	      print_r($result);
+ //$mail=mail;
+$sql = "SELECT name,subscribe.email,phone_no,country,address,sex,football,movie,reading FROM subscribe,interest where
+ subscribe.email=interest.email and subscribe.email=$mail" ;
+echo $sql;
+$result = mysqli_query($conn,$sql);
+
+$row = mysqli_fetch_array($result);
+
+echo $row['name'];
+echo $row['name'];
+echo $row['name'];
+//var_dump($row);
+          
 	        	?>
 	      
-               <form action="data.php" method="post">
+               <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;Subcription Form</h1>
                    
                    <table align="left" cellspacing="25">
 
 	                  <tr>
 	                      <td><font size="3"> Name:</font></td>
-	                      <td><input type="text" name="abc"  class="mytext" value="<?php echo $row[name] ?>"></td>
+	                      <td><input type="text" name="abc"  class="mytext" value="<?php echo $row['name'] ?>"></td>
                           
 	                      <td><font size="3" > COUNTRY:</font></td>
 	                      <td><select class="mytext" name="country" >
-                          <option value="nepal" <?php if (isset($country) && $country=="nepal") echo "selected";?>>NEPAL</option>
-                          <option value="bhutan" <?php if (isset($country) && $country=="bhutan") echo "selected";?>>BHUTAN</option>
-                          <option value="mayanmar" <?php if (isset($country) && $country=="mayanmar") echo "selected";?>>MAYANMAR</option>
+                          <option value="nepal" <?php if (isset($row['country']) && $row['country']=="nepal") echo "selected";?>>NEPAL</option>
+                          <option value="bhutan" <?php if (isset($row['country']) && $row['country']=="bhutan") echo "selected";?>>BHUTAN</option>
+                          <option value="mayanmar" <?php if (isset($row['country']) && $row['country']=="mayanmar") echo "selected";?>>MAYANMAR</option>
                        
                           </select> </td>
 	
@@ -74,10 +108,10 @@ echo "gg";
 
 	                  <tr>
 	                    <td><font size="3"> Email:</font></td>
-	                    <td><input type="email" name="email" class="mytext" id="mail" value=" <?php echo '$row[email]' ?>"></td>
+	                    <td><input type="email" name="email" class="mytext" id="mail" value=" <?php echo $row['email'] ?>"></td>
                       
 	                    <td><font size="3"> Address:</font></td>
-	                    <td><textarea rows="5" cols="33" name="address" value="<?php echo '$row[address]' ?>"></textarea></td>
+	                    <td><textarea rows="5" cols="33" name="address" value="<?php echo $row['address'] ?>"></textarea></td>
 		                
 	
 	                  </tr>	
@@ -85,18 +119,18 @@ echo "gg";
 
 	                  <tr>
 	                    <td><font size="3"> Sex:</font></td>
-	                    <td><input type="radio" value="male" id="male" name="male" <?php if (isset($gender) && $gender=="male") echo "checked";?>>Male
-	                    <input type="radio" value="female" id="female" name="male" <?php if (isset($gender) && $gender=="female") echo "checked";?>>Female</td>
+	                    <td><input type="radio" value="male" id="male" name="male" <?php if (isset($row['sex']) && $row['sex']=="male") echo "checked";?>>Male
+	                    <input type="radio" value="female" id="female" name="male" <?php if (isset($row['sex']) && $row['sex']=="female") echo "checked";?>>Female</td>
 	                    
 	                    <td><font size="3"> phone no:</font></td>
-	                    <td><input type="text"  name="phn" class="mytext" onkeypress="check(event)" value="<?php echo $phn ?>"></td>
+	                    <td><input type="text"  name="phn" class="mytext" onkeypress="check(event)" value="<?php echo $row['phone_no'] ?>"></td>
 	                    
 	                  </tr>	
                       <tr>
      	                <td><font size="3">Interest:</td>
-	                    <td><input type="checkbox" name="interest[]" value="football" <?php if (isset($interest[0]) && $interest[0]=="football") echo "checked";?>>Football 
-	    	            <input type="checkbox" name="interest[]" value="movie" <?php if (isset($interest[1]) && $interest[1]=="movie") echo "checked";?>>Movie
-	                    <input type="checkbox" name="interest[]" value="reading" <?php if (isset($interest[2]) && $interest[2]=="reading") echo "checked";?>>Reading
+	                    <td><input type="checkbox" name="interest[]" value="football" <?php if (isset($row['football']) && $row['football']=="football") echo "checked";?>>Football 
+	    	            <input type="checkbox" name="interest[]" value="movie" <?php if (isset($row['movie']) && $row['movie']=="movie") echo "checked";?>>Movie
+	                    <input type="checkbox" name="interest[]" value="reading" <?php if (isset($row['reading']) && $row['reading']=="reading") echo "checked";?>>Reading
 	                    </td>
 	                  
 	                  </tr>	
@@ -104,7 +138,8 @@ echo "gg";
 
                       
                        <button type="reset" value="reset" class="button1 button_attri">Reset</button>
-                       <input type="submit" value="Submit" class="button button_attri">
+                       <input type="submit" value="edit" class="button button_attri">
+                       <?php if (isset($_POST['Submit'])) { echo "<script type='text/javascript'>subscribetab();</script>"; } ?>
                </form>
             </div>
             </div>

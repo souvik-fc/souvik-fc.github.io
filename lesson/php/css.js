@@ -47,3 +47,18 @@ function subscribetab()
  	      JSON.stringify(ob);
  	      console.log(ob);
     } 
+
+  function opt(){
+  
+  if(document.getElementById("country").options[0].selected){
+    document.getElementById("state1").style.visibility="visible";
+    document.getElementById("state2").style.visibility="hidden";
+
+  }
+  else{
+    document.getElementById("state1").style.visibility="hidden";
+    document.getElementById("state2").style.visibility="visible";  
+  }
+  document.getElementById("state1_name").style.visibility="visible";
+  
+}
