@@ -146,7 +146,7 @@
 	                    <td><font size="3"> Sex:</font></td>
 	                    <td><input type="radio" value="male" id="male" name="male" >Male
 	                    <input type="radio" value="female" id="female" name="male" >Female
-                     <font size="3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address:</font></td>
+                     <font size="3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address:</font></td>
                       <td><textarea rows="5" cols="33" name="address" id="address"></textarea></td>
 	                    
 	                    

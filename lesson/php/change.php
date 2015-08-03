@@ -177,7 +177,7 @@ $row = mysqli_fetch_array($result);
 	                    <td><font size="3"> Sex:</font></td>
 	                    <td><input type="radio" value="male" id="male" name="male" <?php if ($row['gender']=='male') echo 'checked="checked"';?>>Male
 	                    <input type="radio" value="female" id="female" name="male" <?php if ($row['gender']=='female') echo 'checked="checked"';?>>Female
-                     <font size="3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address:</font></td>
+                     <font size="3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address:</font></td>
                       <td><textarea rows="5" cols="33" name="address" id="address"><?php echo $row['address'];?></textarea></td>
 	                    
 	                    
