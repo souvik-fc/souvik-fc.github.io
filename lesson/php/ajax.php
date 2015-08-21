@@ -97,7 +97,7 @@
              <div id="div11"></div>
 	      
                 <form name="form1">
-                   <h1>&nbsp;&nbsp;&nbsp;&nbsp;Subcription Form</h1>
+                   <h1>&nbsp;&nbsp;&nbsp;&nbsp;Subscription Form</h1>
                    
                    <table align="left" cellspacing="25">
 
