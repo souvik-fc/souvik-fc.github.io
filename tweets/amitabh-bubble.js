@@ -17,26 +17,44 @@ window.onload = function() {
 
 		 
 		var fam=new parse();
-		var j=310,k=130;
+		var h=610,k=530,r=60;
 		var lim=1250;
-
-		for(i=0;i<fam.family.length;i++){
+		var step = 2*Math.PI/50;
+		        var theta=0;
+        console.log(fam.kbc.length);
+		for(i=0;i<fam.arr.length;i++){
+			//debugger;
+         
 			
-			if(j<lim)
-		    {
-		      j=j+50;		
-		      bubble(j,k,fam.family[i].retweet_count/50,"red",fam.family[i].text);
-	    }
-		else{
+			//if(j<lim)
+		    
+		      //j=j+50;
+		       
+		        if(theta < 2*Math.PI)
+		        {
+		      //for(var theta=0;  theta < 2*Math.PI;  theta+=step)
+			      var x = h + r*Math.cos(theta);
+			       var y = k - r*Math.sin(theta);    //note 2.
+			       //ctx.lineTo(x,y);
+			     		
+		      bubble(x,y,fam.arr[i].retweet_count/50,"red",fam.arr[i].text);
+		      theta+=step;
+	           }
+	        else{
+	        	theta=0;
+	        	r=r+20;
+	        }   
+	}
+	/*	else{
 			 j=310;
 			 j=j+50;	
 			 k=k+60;
 		     bubble(j,k,fam.family[i].retweet_count/50,"red",fam.family[i].text);
     }
 
-		}
+		} */
 		
-		var j=310,k=k+60;
+	/*	var j=310,k=k+60;
 		for(i=0;i<fam.film.length;i++){
 			if(j<lim)
 		    {
@@ -100,7 +118,7 @@ window.onload = function() {
 	    }
 	}
 		
-		 
+		 */
 		 
  
 
